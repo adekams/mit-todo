@@ -1,0 +1,137 @@
+:root {
+    --primary-color: #80CFA9;
+}
+body {
+   box-sizing: border-box; 
+   background: #F5F5F5;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   max-width: 100%;
+   overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 100vh;
+}
+main {
+    max-width: 1150px;
+    padding: 30px;
+    margin: 0 auto;
+    height: 100%;
+}
+h1 {
+    font-size: 2em;
+    margin: 20px auto;
+    text-align: center;
+    font-weight: medium;
+}
+form {
+    text-align: center;
+    margin: 40px auto;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    display: flex;
+}
+input {
+    padding: 8px 20px;
+    background: #fff;
+    border: none;
+    width: 70%;
+    border-right: 1px solid var(--primary-color);
+}
+#btn {
+    background: transparent;
+    padding: 8px 15px;
+    border: none;
+    color: var(--primary-color);
+    width: 30%;    
+}
+
+#btn:hover,
+.clear-list:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    background: var(--primary-color);
+    color: #fff;
+}
+
+input:focus, 
+#btn:focus,
+.clear-list {
+    outline: none;
+}
+
+ul {
+    list-style: none;
+    margin: 20px auto;
+}
+
+li {
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;   
+}
+
+.item-name {
+   font-weight: 500;
+}
+
+span.options{
+    float: right;
+    margin-left: 20px;
+}
+.far {
+    margin-right: 15px;
+    font-size: 15px;
+}
+
+.far:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.edit {
+    color: #26BAE7;
+}
+
+.delete {
+    color: #D62828;
+}
+
+.check {
+    color: green;
+}
+.clear {
+    text-align: center;
+    font-weight: 800;
+    margin-top: 50px;
+    
+}
+
+.clear-list {
+
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    background: transparent;
+    color: var(--primary-color);
+    padding:8px 15px;
+    
+}
+.clear-list:hover {
+ color: red;
+ cursor: pointer;
+}
+.strike {
+    text-decoration: line-through;
+    
+}
+.fade-out {
+    color: #BBE2CF;
+}
