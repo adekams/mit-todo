@@ -45,12 +45,14 @@ input {
     background: #fff;
     border: none;
     width: 70%;
+    font-size: 1.2em;
     border-right: 1px solid var(--primary-color);
 }
 #btn {
     background: transparent;
     padding: 8px 15px;
     border: none;
+    font-size: 1.2em;
     color: var(--primary-color);
     width: 30%;    
 }
@@ -81,6 +83,7 @@ li {
 
 .item-name {
    font-weight: 500;
+   font-size: 1.2em;
 }
 
 span.options{
@@ -89,7 +92,7 @@ span.options{
 }
 .far {
     margin-right: 15px;
-    font-size: 15px;
+    font-size: 18px;
 }
 
 .far:hover {
@@ -98,7 +101,12 @@ span.options{
 }
 
 .edit {
-    color: #26BAE7;
+    /* color: #26BAE7; */
+    color: #95cfe0;
+}
+.edit:hover {
+    cursor: default;
+    transform: scale(1);
 }
 
 .delete {
@@ -125,9 +133,11 @@ span.options{
     
 }
 .clear-list:hover {
- color: red;
- cursor: pointer;
+    color: red;
+    cursor: pointer;
+    background: transparent;
 }
+
 .strike {
     text-decoration: line-through;
     

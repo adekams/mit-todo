@@ -52,7 +52,7 @@ form.addEventListener('submit', e => {
         else if (e.target.classList.contains('check')) {
             // console.log(e) 
             strikeItem(e)
-         }
+        }
 
         
     }
@@ -60,37 +60,23 @@ form.addEventListener('submit', e => {
 
     //delete the li item when it's delete icon is clicked
     function deleteItem(e) {
-        //get li element
-        let deleteEle = e.target.parentNode.parentNode.parentNode
+        //get li element and remove the li element
+        let deleteEle = e.target.parentNode.parentNode
+        let deleted = deleteEle.parentNode
         
-        //get ul element
-        let pNode = deleteEle.parentElement
-        // console.log(pNode)
-        // console.log(deleteEle)
-
-        //remove the child element li from its parent element(ul)
-        pNode.removeChild(deleteEle)
-        
+        deleted.remove()       
     }
 
 
     //add or remove class strike from the li item
     function strikeItem(e) {
-        let strikeEle = e.target.parentNode
+        let striked = e.target.parentNode
+        let strikedOut = striked.parentNode
 
-        let pNode = strikeEle.parentNode
-
-        if (pNode.className == 'strike' ) {           
-            pNode.classList.remove('strike')
+        if (e.target.classList.contains('check')) {           
+            strikedOut.classList.toggle('strike')
             e.target.classList.toggle('fade-out')
-            console.log(e.target.className)
-
-        }
-        else{
-            pNode.classList.add('strike')
-            e.target.classList.toggle('fade-out')
-            console.log(e.target.className)
-        }   
+        }  
     }
 
     //clear all lists when clear button is clicked
